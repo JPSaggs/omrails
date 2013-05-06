@@ -1,9 +1,5 @@
-class AddUserIdToPins < ActiveRecord::Migration
+class AddNameToUsers < ActiveRecord::Migration
   def change
-    create_table :pins do |t|
-      t.integer :user_id
-      t.timestamps
-    end
-    add_index :pins, :user_id
+    add_column :users, :name, :string
   end
 end
